@@ -1,0 +1,22 @@
+{
+  "name": "ts-example",
+  "version": "1.0.0",
+  "description": "A sample codebase to demonstrate configuring a basic Node app",
+  "main": "index.ts",
+  "scripts": {
+    "start:build": "tsc -w",
+    "start:run": "nodemon build/index.js",
+    "start": "concurrently npm:start:*"
+  },
+  "author": "Tanner Barcelos",
+  "license": "ISC",
+  "dependencies": {
+    "@types/node": "^18.7.16",
+    "concurrently": "^7.4.0",
+    "dotenv": "^16.0.2",
+    "typescript": "^4.8.3"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  }
+}
