@@ -5,7 +5,6 @@ import (
 )
 
 func main() {
-	
 	const TOTAL_CONFERENCE_TICKETS uint = 50
 	var remainingTickets uint = 50
 	var username string
@@ -23,8 +22,6 @@ func main() {
 	}else {
 		print("Conference is sold out")
 	}
-
-
 }
 
 func getUsername(username* string) {
@@ -43,5 +40,6 @@ func decreaseTicketCount(count *uint) {
 
 func buildTicket(username* string, email* string, remainingTickets* uint) {
 	decreaseTicketCount(remainingTickets)
-	fmt.Printf("\n\nWelcome to the conference! Enjoy your time.\nRemaining Tickets: %d", *remainingTickets)
+	fmt.Printf("\nusername: %s\nemail: %s\n", *username, *email)
+	fmt.Printf("\n\nWelcome to the conference! Enjoy your time.\n\nRemaining Tickets: %d", *remainingTickets)
 }
