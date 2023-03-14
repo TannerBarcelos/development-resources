@@ -2,6 +2,8 @@ package main
 
 import (
 	"fmt"
+
+	"github.com/tannerbarcelos/go-tutorial-nana/internal/utils"
 )
 
 func main() {
@@ -34,12 +36,8 @@ func getEmail(email* string) {
 	fmt.Scan(email) 
 }
 
-func decreaseTicketCount(count *uint) {
-	*count = *count - 1
-}
-
 func buildTicket(username* string, email* string, remainingTickets* uint) {
-	decreaseTicketCount(remainingTickets)
+	utils.DecreaseTicketCount(remainingTickets) // demo of using internal packages / other packages in a module (think module.exports / expor in JS)
 	fmt.Printf("\nusername: %s\nemail: %s\n", *username, *email)
 	fmt.Printf("\n\nWelcome to the conference! Enjoy your time.\n\nRemaining Tickets: %d", *remainingTickets)
 }
